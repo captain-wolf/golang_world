@@ -1,18 +1,18 @@
 package main
 
-import "fmt"
+// import "fmt"
 
-var card string
 
 func main() {
-	cards := deck{ newCard()}
+	cards := newDeck()
+	cards.saveToFile("my_cards")	
+	//we are assigning 2 new variables based off the return from the deal() function. Both are of type deck
+	// hand, remainingCards := deal(cards, 5)
 
-	cards = append(cards, "Six of Spades")
-	fmt.Println(cards)
-
-	cards.print()
+	//print output
+	//cards.print()
+// 	hand.print()
+// 	remainingCards.print()
 }
 
-func newCard() {
-	return "Five of Diamonds"
-}
+
