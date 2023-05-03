@@ -1,2 +1,2 @@
 # golang_world
-spring board for Golang Projects
+spring board for captain_wolf's Golang projects & testing
