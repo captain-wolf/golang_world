@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math/rand"
 	"os"
 	"strings"
 )
@@ -62,5 +63,16 @@ func newDeckFromFile(filename string) deck {
 	}
 	//we will do the reverse of save to file essentially. We will use the Split func
 	s := strings.Split(string(bs), ",")
+
 	return deck(s)
+
+}
+
+func (d deck) shuffle() {
+	for i := range d {
+		// create new position of card using rand package
+		// len is short for length function which returns the length according to type
+		newPosition := rand.Intn(len(d) - 1)
+
+	}
 }
