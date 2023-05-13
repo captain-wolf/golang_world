@@ -49,6 +49,7 @@ func (d deck) toString() string {
 	return strings.Join([]string(d), ",")
 }
 
+// save to file
 func (d deck) saveToFile(filename string) error {
 	return os.WriteFile(filename, []byte(d.toString()), 0666)
 }
