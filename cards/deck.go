@@ -38,6 +38,7 @@ func (d deck) print() {
 
 // the goal of the deal function is to pass in the deck variable as d and the index as handSize
 // addtionally we want to tell go to expect 2 returns of type "deck" notated in (deck,deck)
+// upToIncluding:notIncluding <-- range inside of slice syntax
 func deal(d deck, handSize int) (deck, deck) {
 	return d[:handSize], d[handSize:]
 }
@@ -73,6 +74,9 @@ func (d deck) shuffle() {
 		// create new position of card using rand package
 		// len is short for length function which returns the length according to type
 		newPosition := rand.Intn(len(d) - 1)
+
+		//swap the elements --
+		d[i], d[newPosition] = d[newPosition], d[i]
 
 	}
 }
