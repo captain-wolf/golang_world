@@ -4,6 +4,8 @@ import "fmt"
 
 type numberList []int8
 
+//type numType string
+
 func createList() numberList {
 
 	//numberlist type of int8
